@@ -50,12 +50,12 @@ class Director:
             self.card.draw()
 
         print(f"The card is: {self.card.value}")
-        self.player_guess = input("Higher or lower? [h/l] ")
+        self.player_guess = input("It is the next number Higher or lower? [h/l] ")
         self.second_card.draw()
         print(f"The card is: {self.second_card.value}")        
        
     def do_updates(self):
-        """Check the players input, then updates the player's score.
+        """Now check the players input, then updates the player's score.
 
         Args:
             self (Director): An instance of Director.
@@ -75,7 +75,7 @@ class Director:
 
         if self.total_score <= 0:
             self.is_playing = False
-            print("Game Over")
+            print("Sorry the Game is Over")
 
     def do_outputs(self):
         """Displays the new score and ask the player if they want to play again.
@@ -86,8 +86,8 @@ class Director:
         if not self.is_playing:
             return
                
-        print(f"Your score is: {self.total_score}")
-        play_again = input("Play again? [y/n] ")
+        print(f"Look! your score is: {self.total_score}")
+        play_again = input("Do you want to play again? [y/n] ")
         print("\n")
         if play_again == "n":
             self.is_playing = False
