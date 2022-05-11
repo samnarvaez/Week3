@@ -1,4 +1,4 @@
-from game.card import Card
+from Game.card import Card
 
 
 class Director:
@@ -48,11 +48,11 @@ class Director:
         """
         if (self.card.value == 0):
             self.card.draw()
-
-        print(f"The card is: {self.card.value}")
+ 
+        print(f"The card is: {self.card.value} of {self.card.suits()}")
         self.player_guess = input("It is the next number Higher or lower? [h/l] ")
         self.second_card.draw()
-        print(f"The card is: {self.second_card.value}")        
+        print(f"The card is: {self.second_card.value} of {self.second_card.suits()}")        
        
     def do_updates(self):
         """Now check the players input, then updates the player's score.
