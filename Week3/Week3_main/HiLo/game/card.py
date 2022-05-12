@@ -19,6 +19,7 @@ class Card:
 
     def draw(self):
         self.value = random.randint(1,13)
+    # pushing to gitHub
         
             
 
